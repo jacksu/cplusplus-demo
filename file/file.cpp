@@ -2,7 +2,7 @@
  * file.cpp
  *
  *  Created on: 2018年8月8日
- *      Author: sunny.su
+ *      Author: jacksu
  */
 
 #include "file.h"

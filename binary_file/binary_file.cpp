@@ -50,14 +50,12 @@ bool read(const char* path){
      return true;
 }
 
-
-int main() {
-  char path[1024] ="./test.dat";
+bool write(const char* path){
   ofstream resource_file;
   resource_file.open(path, ios::out | ios::binary | ios::ate);
   if (!resource_file.is_open()) {
     std::cout << "open resource file failed: " << path <<std::endl;
-    return 1;
+    return false;
   }
   std::string key = "key";
   int key_len = key.size();
@@ -69,6 +67,12 @@ int main() {
   resource_file.write( value.c_str(), value_len );
   resource_file.flush();
   resource_file.close();
+  return true;
+}
+
+int main() {
+  char path[1024] ="./test.dat";
+  write(path);
   read(path);
   return 0;
 }

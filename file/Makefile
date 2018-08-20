@@ -1,10 +1,10 @@
 CC=g++
-CFLAGS=-Wall
-LDFLAGS=
+CFLAGS=-Wall -I../third-party/glog/include/
+LDFLAGS=-L../third-party/glog/lib -Wl,-rpath ../third-party/glog/lib  -lglog
 SRC=$(wildcard *.cpp)
 OBJ=$(patsubst %.cpp,%.o,$(SRC))
 
-OUTPUT=link_test 
+OUTPUT=file_test 
 
 all:$(OUTPUT)
 

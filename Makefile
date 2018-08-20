@@ -1,5 +1,5 @@
 # 需要排除的目录
-exclude_dirs := include bin
+exclude_dirs := include bin third-party
 # 取得当前子目录深度为1的所有目录名称
 
 DIRS := $(shell find . -maxdepth 1 -type d)

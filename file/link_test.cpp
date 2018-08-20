@@ -2,7 +2,6 @@
 #include <stdio.h>
 #include <map>
 #include <vector>
-#include "hash.h"
 #include <unistd.h>
  
 #include <sys/types.h>
@@ -12,6 +11,6 @@
 int main() {
   std::string file = "./test";
   if(access(file.c_str(), F_OK) != -1){
-  remove(file);
+    remove(file.c_str());
   }
 }
